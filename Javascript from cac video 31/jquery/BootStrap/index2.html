@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classname and classlist</title>
+    <style>
+        .bluebg{
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading" class="ek eee eeee">Hello sudip</h1>
+    <button id="toggleBtn">Toggle Btn</button>
+    <button id="removeBtn">Remove Btn</button>
+</body>
+<script>
+    let btn = document.querySelector('#toggleBtn')
+    let removebtn = document.querySelector('#removeBtn')
+    let heading = document.querySelector('#heading')
+    btn.addEventListener('click',() => {
+        heading.classList.toggle('bluebg')
+    })
+    removebtn.addEventListener('click',() => {
+        heading.classList.remove('bluebg')
+    })
+</script>
+</html>

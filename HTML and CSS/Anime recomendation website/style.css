@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: black;
+}
+
+/* Navbar starts*/
+.navcontainer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.4rem 0rem;
+    background-color: #31363F;
+}
+.logo{
+    margin-right:auto ;
+    font-size: 2.3rem;
+    padding-left:2rem ;
+    font-weight: 500;
+    font-family: "ubuntu",sans-serif;
+    color: white;
+}
+li, a{
+    text-decoration: none;
+    list-style: none;
+}
+a{
+    padding-right: 4rem;
+    font-size: 1.2rem;
+    font-family: "ubuntu",sans-serif;
+    color: aqua;
+}
+li a:hover{
+    color: rgb(19, 134, 235);
+}
+/* Navbar ends here */
+
+/* second main section starts here */
+.secondcontainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+.secondcontainer img{
+    border-radius: 50%;
+    max-height: 200px;
+}
+.secondcontainer p{
+    max-width: 60rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 10px;
+    color: aliceblue;
+}
+/* second main section ends here */
+
+/* Top section */
+.top{
+    margin-top: 0.5rem;
+}
+.tophead{
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding-left: 1.2rem;
+    font-family: "ubuntu",sans-serif;
+    color: aliceblue;
+}
+/* Top section ends*/
+
+/* Flex section starts here */
+#flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.3rem;
+    margin-top: 10px;
+}
+.box{
+    height: 250px;
+    width: 175px;
+}
+.box img{
+    height: 250px;
+    width: 175px;
+}
+.container {
+    width: 100%; 
+    max-height: 100%; 
+    overflow: hidden; 
+}
+
+.overflow-container {
+    overflow: auto;
+    max-height: 100%; 
+}
+/* Flex section ends here */
+
+@media screen and (max-width:768px){
+    .logo{
+        font-size: 2rem;
+        padding: 8px;
+        padding-left: 1.2rem;
+    }
+    a{
+        padding-right: 1.5rem;
+    }
+
+    .secondcontainer img{
+        max-height: 180px;
+    }
+    .secondcontainer p{
+        font-size: 1rem;
+        padding: 0px 15px;
+    }
+    .tophead{
+        font-size: 1.4rem;
+        padding-left: 0rem;
+    }
+    .box{
+        height: 230px;
+        width: 160px;
+    }
+    .box img{
+        height: 230px;
+        width: 160px;
+    }
+}
+
+@media screen and (max-width:450px){
+    .box{
+        height: 230px;
+        width: 160px;
+    }
+    .box img{
+        height: 230px;
+        width: 160px;
+    }
+    .logo{
+        font-size: 1.6rem;
+        padding: 8px;
+        padding-left:0.8rem ;
+    }
+    a{
+        padding-right: 0.8rem;
+        font-size:1rem;
+    }
+
+    .secondcontainer img{
+        max-height: 180px;
+    }
+    .secondcontainer p{
+        font-size: 1rem;
+        font-weight: normal;
+    }
+    .tophead{
+        font-size: 1.1rem;
+        padding-left: 0.5rem;
+    }
+}

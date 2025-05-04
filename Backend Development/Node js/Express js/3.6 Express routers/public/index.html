@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Test</title>
+</head>
+<body>
+    <script>
+        async function test() {
+            try {
+                let response = await fetch("/", { method: "PUT" });
+                let text = await response.text();
+                console.log(text);  // Display response text from the server
+            } catch (error) {
+                console.error("Error occurred:", error);
+            }
+        }
+        test();
+    </script>
+</body>
+</html>

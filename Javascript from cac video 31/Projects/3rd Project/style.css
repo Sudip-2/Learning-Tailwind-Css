@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    display: flex;
+    height: 100svh;
+    justify-content: center;
+    align-items: center;
+}
+#clock{
+    background-color: orange;
+    height: 50px;
+    width: 150px;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    padding-top: 13px;
+}
+.center{
+    text-align: center;
+}
+#banner{
+    margin-bottom: 10px;
+}

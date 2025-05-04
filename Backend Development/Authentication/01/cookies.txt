@@ -1,0 +1,20 @@
+Cookies:
+What they are: Small pieces of data stored on the client-side (in the user's browser) by the server.
+
+Storage: Stored in the browser and sent back to the server with each request to the domain that set the cookie.
+
+Data Limit: Typically around 4KB per cookie.
+
+Usage:
+
+Session management: Storing session IDs to maintain user logins.
+Personalization: Remembering user preferences (e.g., themes).
+Tracking: Analytics or ad tracking.
+
+Sessions:
+What they are: Server-side storage of information associated with a particular user session.
+Storage: Data is stored on the server (not in the browser), but the session ID is sent to the client as a cookie or URL parameter.
+Data Limit: Limited by server storage rather than individual cookie size.
+Usage:
+User authentication: Sessions are often used to store user-specific data like login status, cart contents, or user roles.
+Sensitive data: Sessions are used for more secure data storage since they are not accessible on the client-side.

@@ -1,0 +1,18 @@
+Api : 
+An API (Application Programming Interface) is a set of rules and tools that allows different software applications to communicate 
+with each other.
+
+Rest Api :
+A popular type of web API that uses HTTP requests to perform operations like GET (retrieve data), POST (send data), PUT (update data), 
+and DELETE (remove data).  
+
+Api endpoints :
+baseurl/endpoint endpoints are basically different routes on api providers server
+
+Query parameters :
+baseurl/endpoint?query=type&query2=type it starts with ? then you type query in a key value pair then to add multiple queries 
+we can use &
+
+Path parameters :
+baseurl/endpoint/{path parameter} used to get something specific 
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <a href="/" id="name">Sudip Paul</a>
+            <img src="images/plus.png" alt="create icon" id="create-icon">
+            <form action="/create" method="post">
+                <dialog class="getInTouchContainer">
+                    <div class="h3andclosecontainer">
+                        <h3>Write a Blog</h3>
+                        <button class="close-button">&times;</button>
+                    </div>
+                    <input type="text" name="img" id="imageUrl" placeholder="Enter image Url" autocomplete="off">
+                    <br>
+                    <input type="text" name="writer" id="sendersName" placeholder="Enter writers Name" autocomplete="off">
+                    <br>
+                    <input type="date" name="date" id="date" >
+                    <br>
+                    <input type="text" name="heading" id="heading" placeholder="Enter Heading">
+                    <p id="selectTagsheading">Select Tags</p>
+                    <div class="checkbox-tags">
+                        Design<input type="checkbox" name="tagOne" value="Design">
+    
+                        Research<input type="checkbox" name="tagTwo" value="Research">
+    
+                        Presentation<input type="checkbox" name="tagThree" value="Presentation">
+                    </div>
+                    <textarea name="desc" placeholder="Write article here" id=""></textarea>
+                    <br>
+                    <button type="submit" id="submit">Submit</button>
+                </dialog>
+            </form>
+
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+        </ul>
+    </nav>
+</body>
+<script src="script.js"></script>
+
+</html>

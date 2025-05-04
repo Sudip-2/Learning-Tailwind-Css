@@ -1,0 +1,3 @@
+Learnt about ClassName and ClassList
+Class name return a all the class name added 
+ClassList returns  all the class name added but in a object format so we can use many methods like add remove replace and toggle

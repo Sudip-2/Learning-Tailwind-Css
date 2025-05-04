@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#recentBlogText {
+    font-weight: bold;
+    width: 1180px;
+    margin-inline: auto;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.recentContainer {
+    width: 1180px;
+    height: 600px;
+    display: grid;
+    margin-inline: auto;
+    grid-template-rows: repeat(3, 190px);
+    grid-template-columns: 570px 570px;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+
+.item {
+    cursor: pointer;
+}
+
+#nameDetails {
+    color: rgb(216, 35, 216);
+    font-weight: bold;
+}
+
+.tags button {
+    border-radius: 25px;
+    padding: 5px 10px;
+    border: transparent;
+    cursor: pointer;
+}
+
+.tagBtnDesign {
+    background-color: rgba(0, 0, 255, 0.1);
+    color: rgb(170, 13, 170);
+    font-weight: bold;
+}
+
+.tagBtnResearch {
+    background-color: rgba(0, 102, 255, 0.1);
+    color: rgb(34, 34, 231);
+    font-weight: bold;
+}
+
+.tagBtnPpt {
+    background-color: rgba(0, 255, 0, 0.1);
+    color: rgb(22, 199, 22);
+    font-weight: bold;
+}
+
+.none{
+    display: none;
+}
+
+#item1 {
+    grid-area: 1/1/3/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 400px;
+}
+
+#item1 .tags{
+    padding-bottom: 10px;
+}
+#item1 p,
+h3,
+.tags {
+    padding: 0px 10px;
+}
+
+#item1h3 {
+    padding: 0px 10px;
+}
+
+#item1 img {
+    height: 50%;
+}
+
+#item2 {
+    grid-area: 1/2/2/3;
+}
+
+#item3,
+#item2 {
+    display: flex;
+    gap: 20px;
+    max-height: 190px;
+}
+
+#item2 .itemOthersCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#item2 p,h3,.tags {
+    padding: 0px 0px;
+}
+
+.itemimg img {
+    height: 100%;
+    width: 250px;
+}
+
+#item3 {
+    grid-area: 2/2/3/3;
+
+}
+
+#item3 .itemOthersCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#item4 {
+    grid-area: 3/1/4/3;
+    display: flex;
+    max-height: 200px;
+    gap: 40px;
+}
+#item4 .itemimg img{
+    width: 570px;
+}
+#item4 .itemOthersCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.item{
+    transition: transform 0.8s ease-in-out , box-shadow 0.3s ease-in-out;
+}
+.item:hover{
+    transform: scale(1.01);
+    box-shadow:  5px 5px 2.5px rgba(0, 0, 0, 0.5);
+}

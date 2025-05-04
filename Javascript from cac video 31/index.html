@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      align-items: center;
+    }
+
+    #imgBox {
+      height: 250px;
+      width: 400px;
+    }
+
+    #img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="imgBox">
+    <img
+      src=""
+      alt="" id="img">
+  </div>
+  <!-- <button onclick="stopCarousel()">Stop</button> -->
+  <button onclick="forward()">forward</button>
+  <button onclick="backward()">backward</button>
+
+</body>
+
+<script>
+  let imgbox = document.getElementById('img')
+  let url1 = "https://randomwordgenerator.com/img/picture-generator/53e1d74a4950ac14f1dc8460962e33791c3ad6e04e5074417c2f7dd49345c7_640.jpg"
+  let url2 = "https://randomwordgenerator.com/img/picture-generator/57e5d6424d51a514f1dc8460962e33791c3ad6e04e50744074267bd2904cc7_640.jpg"
+  let url3 = "https://randomwordgenerator.com/img/picture-generator/57e8d34a4253a414f1dc8460962e33791c3ad6e04e50744172297cdd914ac3_640.jpg"
+  let imgurls = [url1,url2,url3]
+
+  
+  let intervalId = setInterval(() => {
+    imgbox.src = imgurls[0]
+    let img1 = imgurls.shift()
+    imgurls.push(img1)
+  },5000)
+
+  // const stopCarousel = () => {
+  //   clearInterval(intervalId)
+  // }
+  
+  const forward = () => {
+    imgbox.src = imgurls[0]
+    let img1 = imgurls.shift()
+    imgurls.push(img1)
+  }
+
+  const backward = () => {
+    let img1 = imgurls.pop()
+    imgurls.unshift(img1)
+    imgbox.src = imgurls[0]
+  }
+
+</script>
+
+</html>

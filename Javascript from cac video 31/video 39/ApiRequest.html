@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            height: 100svh;
+            align-items: center;
+            font-family: sans-serif;
+        }
+        #card{
+            height: 400px;
+            width: 320px;
+            border-radius: 15px;
+            box-shadow: 3px 3px 10px rgb(207, 207, 207),-3px -3px 10px rgb(207, 207, 207);
+        }
+        #pfp{
+            text-align: center;
+        }
+        img{
+            background-color: aliceblue;
+            border-radius: 50%;
+            height: 160px;
+            width: 160px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+        #pname{
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        #pbio{
+            margin-left: 15px;
+        }
+        #bioBox{
+            width: 300px;
+            height: 124px;
+            background-color: aliceblue;
+            border-radius: 15px;
+            margin: 0px auto;
+            margin-top: 6px;
+            padding: 10px;
+        }
+        </style>
+</head>
+<body>
+    <div id="card">
+        <div id="pfp">
+            <img src="./pfp.webp" alt="pfp image">
+        </div>
+        <div id="name">
+            
+            <p id="pname">Sudip Paul</p>
+        </div>
+        <div id="bio">
+            <p id="pbio">Bio</p>
+            <div id="bioBox"></div>
+        </div>
+    </div>
+</body>
+<script>
+    const reqUrl = "https://api.github.com/users/sudip-2"
+    const xhr = new XMLHttpRequest()
+    let pfp ;
+    xhr.open('GET',reqUrl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState)
+        if(xhr.readyState === 4){
+            console.log(this.responseText)
+            pfp = JSON.parse(this.responseText)
+            console.log(pfp.avatar_url)
+            document.querySelector('img').src = pfp.avatar_url
+            document.getElementById('pname').innerHTML = pfp.login
+            document.getElementById('bioBox').innerHTML = pfp.bio
+        }
+    }
+    xhr.send()
+</script>
+</html>

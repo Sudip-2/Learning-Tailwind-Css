@@ -1,0 +1,67 @@
+body{
+    background-color: rgb(0, 0, 0);
+    font-family: sans-serif;
+}
+h1{
+    color: rgb(0, 255, 0);
+    font-family: "Roboto Slab",sans-serif;
+    font-size: 50px;
+    text-align: center;
+    border: dotted;
+    border-radius: 20px;
+}
+#para1{
+    margin: 50px;
+    color: rgb(0, 255, 0);
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.box{
+    height: 250px;
+    width: 175px;
+    float: left;
+    position: relative;
+    left: 335px;
+    margin: 10px;
+    top: 50px;
+}
+#box1{
+    background: url(gtav.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#box2{
+    background: url(dmc5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+#box3{
+    background: url(lastofus.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+#download{
+    color: rgb(0, 255, 0);
+    position: relative;
+    right: 90px;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    top: 20px;
+}
+table,th,tr,td{
+    color: white;
+    border: white solid;
+    border-collapse: collapse;
+    padding: 10px;
+}
+.table{
+    position: relative;
+    right: 570px;
+    width: 300px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-in</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="signup-container">
+        <div class="signup-form">
+            <h2>Log in</h2>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button id="login">Log in</button>
+        </div>
+        <div class="login-text">
+            do not have an Account ? <a href="index.html">Sign Up</a>
+        </div>
+    </div>
+    <div class="notify ">
+        <h3 id="notify-text"></h3>
+        <button id="close">Close</button>
+    </div>
+</body>
+<script>
+    const loginBtn = document.getElementById('login')
+    const notifyTxt = document.getElementById('notify-text')
+    const notify = document.querySelector('.notify')
+    const closeBtn = document.getElementById('close')
+    const url = 'http://localhost:3000/'
+
+    loginBtn.addEventListener('click', async (event) => {
+        console.log("Hello world")
+        const email = document.getElementById('email').value
+        const password = document.getElementById('password').value
+        const data = {
+            email: email,
+            password: password
+        }
+        let response = await fetch(url + 'login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+        if (response.status === 404) {
+            notifyTxt.innerHTML = await response.text()
+            notify.classList.add('active')
+        }
+        if (response.status === 200) {
+            notifyTxt.innerHTML = await response.text()
+            notify.classList.add('active')
+            window.open("secret.html")
+        }
+        if (response.status === 401) {
+            notifyTxt.innerHTML = await response.text()
+            notify.classList.add('active')
+        }
+        closeBtn.addEventListener('click',() => {
+            notify.classList.remove('active')
+        })
+    })
+</script>
+
+</html>

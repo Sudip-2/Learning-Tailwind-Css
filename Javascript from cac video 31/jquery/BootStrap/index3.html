@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes</title>
+    <style>
+        .bluebg{
+            background-color: aqua;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p id="paraOne" class="redbg" >Hello world</p>
+</body>
+<script>
+    let para = document.getElementById('paraOne')
+    console.log(para.getAttribute('class'))
+    // para.setAttribute('class','bluebg')
+    // para.removeAttribute('class')
+    console.log(para.hasAttribute('class'))
+</script>
+</html>
