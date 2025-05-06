@@ -1,2 +1,0 @@
-json.stringify(data) to convert js object into a JSON string.
-json.parse(data) to convert json data to normal readable format.

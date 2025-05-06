@@ -1,1 +1,0 @@
-Axios simplifies requesting data from one server to another , it also parses json data automatically .
